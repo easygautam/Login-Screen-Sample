@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Login-Screen-Sample</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="facebook">Facebook</string>
+    <string name="g_mail">G-Mail</string>
+    <string name="login">Login</string>
+    <string name="login_promotional_text">App Promotional Text</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_email_input_hint">Enter your email (ex- abc@mail.com)</string>
+    <string name="login_password_input_hint">Enter your password</string>
+    <string name="logo">logo</string>
+</resources>
