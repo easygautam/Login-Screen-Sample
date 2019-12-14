@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Login Screen-->
+    <item name="loginActivity_etlEmail" type="id" />=
+    <item name="loginActivity_etEmail" type="id" />=
+    <item name="loginActivity_etlPassword" type="id" />
+    <item name="loginActivity_etPassword" type="id" />
+    <item name="loginActivity_btnLogin" type="id" />
+    <item name="loginActivity_btnFacebook" type="id" />
+    <item name="loginActivity_btnGmail" type="id" />
+    <item name="loginActivity_btnForgotPassword" type="id" />
+    <item name="loginActivity_llLoginContainer" type="id" />
+
+    <item name="loginActivity_etCreatePassword" type="id" />
+    <item name="loginActivity_etCreatePasswordReEnter" type="id" />
+    <item name="loginActivity_etlCreatePassword" type="id" />
+    <item name="loginActivity_etlCreatePasswordReEnter" type="id" />
+    <item name="loginActivity_btnCreatePassword" type="id" />
+    <item name="loginActivity_llCreatePasswordContainer" type="id" />
+
+</resources>

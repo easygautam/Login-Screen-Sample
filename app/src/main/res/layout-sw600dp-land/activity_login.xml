@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.LoginActivity">
+    tools:context=".view.login.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,76 +52,134 @@
             android:layout_weight="3.5"
             android:fillViewport="true">
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
+                android:layout_height="match_parent"
                 android:paddingStart="@dimen/_30sdp"
-                android:paddingTop="@dimen/_4sdp"
-                android:paddingEnd="@dimen/_30sdp"
-                android:paddingBottom="@dimen/_4sdp">
+                android:paddingEnd="@dimen/_30sdp">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/LoginOutlineEditTextLayout"
-                    android:hint="@string/email"
-                    app:endIconMode="clear_text"
-                    app:helperText="@string/login_email_input_hint"
-                    app:startIconDrawable="@drawable/ic_email">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etEmail"
-                        style="@style/LoginOutlineEditText"
-                        android:inputType="textEmailAddress" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/LoginOutlineEditTextLayout"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:hint="@string/password"
-                    app:endIconMode="password_toggle"
-                    app:helperText="@string/login_password_input_hint"
-                    app:startIconDrawable="@drawable/ic_lock">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etPassword"
-                        style="@style/LoginOutlineEditText"
-                        android:inputType="textPassword" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    style="@style/LoginTextButtonPrimary"
-                    android:text="@string/forgot_password" />
-
-                <com.google.android.material.button.MaterialButton
-                    style="@style/LoginButtonPrimary"
-                    android:layout_marginTop="@dimen/_4sdp"
-                    android:text="@string/login" />
-
+                <!--Login Form-->
                 <LinearLayout
+                    android:id="@+id/loginActivity_llLoginContainer"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:baselineAligned="false"
+                    android:layout_height="match_parent"
                     android:gravity="center"
-                    android:orientation="horizontal">
+                    android:orientation="vertical"
+                    android:visibility="visible">
 
-                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                        android:id="@+id/btnFacebook"
-                        style="@style/LoginButtonFacebook" />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/loginActivity_etlEmail"
+                        style="@style/LoginOutlineEditTextLayout"
+                        android:hint="@string/email"
+                        app:endIconMode="clear_text"
+                        app:helperText="@string/login_email_input_hint"
+                        app:startIconDrawable="@drawable/ic_email">
 
-                    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                        android:id="@+id/btnGmail"
-                        style="@style/LoginButtonGmail" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/loginActivity_etEmail"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textEmailAddress" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/loginActivity_etlPassword"
+                        style="@style/LoginOutlineEditTextLayout"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="@string/password"
+                        app:endIconMode="password_toggle"
+                        app:helperText="@string/login_password_input_hint"
+                        app:startIconDrawable="@drawable/ic_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/loginActivity_etPassword"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loginActivity_btnForgotPassword"
+                        style="@style/LoginTextButtonPrimary"
+                        android:text="@string/forgot_password" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loginActivity_btnLogin"
+                        style="@style/LoginButtonPrimary"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="@string/login" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/loginActivity_btnFacebook"
+                            style="@style/LoginButtonFacebook" />
+
+                        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                            android:id="@+id/loginActivity_btnGmail"
+                            style="@style/LoginButtonGmail" />
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+                <!--Create Password Form-->
+                <LinearLayout
+                    android:id="@+id/loginActivity_llCreatePasswordContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/loginActivity_etlCreatePassword"
+                        style="@style/LoginOutlineEditTextLayout"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="@string/password"
+                        app:endIconMode="password_toggle"
+                        app:helperText="@string/login_password_input_hint"
+                        app:startIconDrawable="@drawable/ic_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/loginActivity_etCreatePassword"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/loginActivity_etlCreatePasswordReEnter"
+                        style="@style/LoginOutlineEditTextLayout"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:hint="@string/_re_enter_password"
+                        app:endIconMode="password_toggle"
+                        app:helperText="@string/login_password_re_enter_input_hint"
+                        app:startIconDrawable="@drawable/ic_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/loginActivity_etCreatePasswordReEnter"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/loginActivity_btnCreatePassword"
+                        style="@style/LoginButtonPrimary"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:text="@string/create_password" />
+
+                </LinearLayout>
+
+            </FrameLayout>
 
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
