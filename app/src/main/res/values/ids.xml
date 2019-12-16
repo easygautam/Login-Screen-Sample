@@ -2,14 +2,15 @@
 <resources>
 
     <!--Login Screen-->
-    <item name="loginActivity_etlEmail" type="id" />=
-    <item name="loginActivity_etEmail" type="id" />=
+    <item name="loginActivity_etlEmail" type="id" />
+    <item name="loginActivity_etEmail" type="id" />
     <item name="loginActivity_etlPassword" type="id" />
     <item name="loginActivity_etPassword" type="id" />
     <item name="loginActivity_btnLogin" type="id" />
     <item name="loginActivity_btnFacebook" type="id" />
     <item name="loginActivity_btnGmail" type="id" />
     <item name="loginActivity_btnForgotPassword" type="id" />
+    <item name="loginActivity_btnCreateAccount" type="id" />
     <item name="loginActivity_llLoginContainer" type="id" />
 
     <item name="loginActivity_etCreatePassword" type="id" />
@@ -18,5 +19,21 @@
     <item name="loginActivity_etlCreatePasswordReEnter" type="id" />
     <item name="loginActivity_btnCreatePassword" type="id" />
     <item name="loginActivity_llCreatePasswordContainer" type="id" />
+
+    <!--Sign Up-->
+    <item name="signUpActivity_etFirstName" type="id" />
+    <item name="signUpActivity_etlFirstName" type="id" />
+    <item name="signUpActivity_etLastName" type="id" />
+    <item name="signUpActivity_etlLastName" type="id" />
+    <item name="signUpActivity_etEmail" type="id" />
+    <item name="signUpActivity_etlEmail" type="id" />
+    <item name="signUpActivity_etMobile" type="id" />
+    <item name="signUpActivity_etlMobile" type="id" />
+    <item name="signUpActivity_etPassword" type="id" />
+    <item name="signUpActivity_etlPassword" type="id" />
+    <item name="signUpActivity_etPasswordReEnter" type="id" />
+    <item name="signUpActivity_etlPasswordReEnter" type="id" />
+    <item name="signUpActivity_btnSignUp" type="id" />
+
 
 </resources>

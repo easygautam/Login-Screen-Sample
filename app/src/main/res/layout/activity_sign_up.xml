@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.easygautam.loginscreen.view.signup.SignUpActivityViewModel" />
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.login.LoginActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_30sdp">
+
+                <TextView
+                    style="@style/SignUpHeadingText"
+                    android:layout_marginTop="@dimen/_8sdp" />
+
+                <TextView
+                    style="@style/SignUpPromotionHeadingText"
+                    android:layout_marginTop="@dimen/_8sdp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <!--First Name-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/signUpActivity_etlFirstName"
+                        style="@style/SignUpOutlineEditTextLayout"
+                        android:hint="@string/first_name"
+                        app:enableLiveHelper="@{true}"
+                        app:endIconMode="clear_text"
+                        app:helperText="@string/sign_up_enter_your_first_name"
+                        app:startIconDrawable="@drawable/ic_person">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/signUpActivity_etFirstName"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textEmailAddress"
+                            android:text='@={viewModel.firstName}' />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Last First Name-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/signUpActivity_etlLastName"
+                        style="@style/SignUpOutlineEditTextLayout"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:hint="@string/last_name"
+                        app:endIconMode="clear_text"
+                        app:helperText="@string/sign_up_enter_your_last_name"
+                        app:enableLiveHelper="@{true}"
+                        app:startIconDrawable="@drawable/ic_person">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/signUpActivity_etLastName"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textEmailAddress"
+                            android:text="@={viewModel.lastName}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Email Name-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/signUpActivity_etlEmail"
+                        style="@style/SignUpOutlineEditTextLayout"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:hint="@string/email"
+                        app:endIconMode="clear_text"
+                        app:helperText="@string/email_input_helper_text"
+                        app:enableLiveHelper="@{true}"
+                        app:startIconDrawable="@drawable/ic_email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/signUpActivity_etEmail"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textEmailAddress"
+                            android:text="@={viewModel.email}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Mobile Number-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/signUpActivity_etlMobile"
+                        style="@style/SignUpOutlineEditTextLayout"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:hint="@string/mobile"
+                        app:endIconMode="clear_text"
+                        app:helperText="@string/mobile_input_helper_text"
+                        app:enableLiveHelper="@{true}"
+                        app:startIconDrawable="@drawable/ic_phone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/signUpActivity_etMobile"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="phone"
+                            android:text="@={viewModel.mobile}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!--Password-->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/signUpActivity_etlPassword"
+                        style="@style/SignUpOutlineEditTextLayout"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:hint="@string/password"
+                        app:endIconMode="password_toggle"
+                        app:helperText="@string/password_input_helper_text"
+                        app:enableLiveHelper="@{true}"
+                        app:startIconDrawable="@drawable/ic_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/signUpActivity_etPassword"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textPassword"
+                            android:text="@={viewModel.password}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/signUpActivity_etlPasswordReEnter"
+                        style="@style/SignUpOutlineEditTextLayout"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:hint="@string/create_password_re_enter_password"
+                        app:endIconMode="password_toggle"
+                        app:helperText="@string/password_re_enter_input_helper_text"
+                        app:enableLiveHelper="@{true}"
+                        app:startIconDrawable="@drawable/ic_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/signUpActivity_etPasswordReEnter"
+                            style="@style/LoginOutlineEditText"
+                            android:inputType="textPassword"
+                            android:text="@={viewModel.passwordReEnter}" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/signUpActivity_btnSignUp"
+                        style="@style/LoginButton"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:text="@string/sign_up_heading_text" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

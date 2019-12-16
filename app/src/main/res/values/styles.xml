@@ -13,7 +13,7 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
-    <!--Login Screen Style-->
+    <!--Login Screen Style  -->
     <style name="LoginOutlineEditText">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -25,26 +25,15 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="LoginPromotionalTextView">
+    <style name="LoginPromotionalTextView" parent="HeadingText.Primary.Bold">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/_14ssp</item>
-        <item name="android:textStyle">bold</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:text">@string/login_promotional_text</item>
-        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 
-    <style name="LoginButtonPrimary">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">@dimen/_8sdp</item>
-        <item name="android:textSize">@dimen/_10ssp</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
-    <style name="LoginButtonGmail">
+    <style name="LoginGmailButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">@dimen/_6sdp</item>
@@ -62,7 +51,7 @@
         <item name="android:padding">@dimen/_8sdp</item>
     </style>
 
-    <style name="LoginButtonFacebook">
+    <style name="LoginFacebookButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginStart">@dimen/_4sdp</item>
@@ -80,15 +69,93 @@
         <item name="android:padding">@dimen/_8sdp</item>
     </style>
 
-    <style name="LoginTextButtonPrimary" parent="@style/Widget.MaterialComponents.Button.TextButton">
+    <style name="LoginForgotPasswordButton" parent="Button.Text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">@dimen/_10ssp</item>
-        <item name="android:textAllCaps">false</item>
         <item name="android:layout_gravity">end</item>
     </style>
 
-    <!--Material Outline Input Style-->
+    <style name="LoginButton" parent="Button.Primary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/_8sdp</item>
+    </style>
+
+
+    <!--Sign Up Screen -->
+    <style name="SignUpHeadingText" parent="HeadingText.Primary.Bold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/sign_up_heading_text</item>
+    </style>
+
+    <style name="SignUpPromotionHeadingText" parent="SubHeadingText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:text">@string/sign_up_promotion_text</item>
+    </style>
+
+    <style name="SignUpOutlineEditTextLayout" parent="MaterialOutlineTextInputLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!-- Common Button Style    -->
+    <style name="Button.Primary" parent="Button">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="Button" parent="@style/Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Button.Text" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!--    Common Text Style   -->
+    <!--    Heading Text    -->
+    <style name="HeadingText.Primary.Bold" parent="HeadingText.Primary">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HeadingText.Primary" parent="HeadingText">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="HeadingText">
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <!--    Sub Heading Text    -->
+    <style name="SubHeadingText.Primary" parent="SubHeadingText">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="SubHeadingText">
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <!--    Paragraph Text  -->
+    <style name="ParagraphText">
+        <item name="android:textSize">@dimen/_11ssp</item>
+    </style>
+
+    <style name="SmallText">
+        <item name="android:textSize">@dimen/_9ssp</item>
+    </style>
+
+
+    <!--Material Outline Input Style    -->
     <style name="MaterialOutlineTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="android:textSize">@dimen/_12ssp</item>
         <item name="errorEnabled">true</item>
@@ -111,9 +178,6 @@
     <style name="MaterialOutlineTextInputLayout.HintText">
         <item name="android:textSize">@dimen/_8ssp</item>
     </style>
-
-
-    <!-- Login Promotional Text View-->
 
 
 </resources>

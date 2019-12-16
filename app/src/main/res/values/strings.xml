@@ -1,19 +1,37 @@
 <resources>
     <string name="app_name">Login-Screen-Sample</string>
+
+    <!--    Login Screen Text-->
     <string name="forgot_password">Forgot password?</string>
+    <string name="create_account">Create account?</string>
     <string name="facebook">Facebook</string>
     <string name="g_mail">G-Mail</string>
     <string name="login">Login</string>
     <string name="login_promotional_text">App Promotional Text</string>
+
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="login_email_input_hint">Enter your email (ex- abc@mail.com)</string>
-    <string name="login_email_input_error">Enter correct email</string>
-    <string name="login_password_input_hint">Password should be min five latter</string>
-    <string name="login_password_re_enter_input_hint">Password must be same</string>
-    <string name="login_password_re_enter_input_error">Password is not matching</string>
-    <string name="login_password_input_error">Enter min five latter</string>
+    <string name="email_input_helper_text">Enter your email (ex- abc@mail.com)</string>
+    <string name="mobile_input_helper_text">Enter your mobile</string>
+    <string name="mobile_input_error">Mobile number should be 10 digit</string>
+    <string name="email_input_error">Enter correct email</string>
+    <string name="password_input_helper_text">Password should be min five latter</string>
+    <string name="password_input_error">Enter min five latter</string>
+    <string name="password_re_enter_input_helper_text">Password must be same</string>
+    <string name="password_re_enter_input_error">Password is not matching</string>
     <string name="logo">logo</string>
     <string name="create_password">Create Password</string>
-    <string name="_re_enter_password">Re-enter password</string>
+    <string name="create_password_re_enter_password">Re-enter password</string>
+
+    <!--    Sign Up Screen Text-->
+    <string name="sign_up_heading_text">Sign Up</string>
+    <string name="sign_up_promotion_text">Create a account and track you progress!</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="sign_up_enter_your_first_name">Enter your first name</string>
+    <string name="sign_up_enter_your_last_name">Enter your last name</string>
+
+    <string name="sign_up_enter_your_first_name_error">First name required</string>
+    <string name="mobile">Mobile</string>
+
 </resources>

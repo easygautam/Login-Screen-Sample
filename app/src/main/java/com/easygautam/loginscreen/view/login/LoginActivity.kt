@@ -1,5 +1,6 @@
 package com.easygautam.loginscreen.view.login
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View.INVISIBLE
 import android.view.View.VISIBLE
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.easygautam.loginscreen.R
 import com.easygautam.loginscreen.view.*
+import com.easygautam.loginscreen.view.signup.SignUpActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
@@ -54,6 +56,10 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
+        loginActivity_btnCreateAccount.setOnClickListener {
+            startActivity(Intent(this, SignUpActivity::class.java))
+        }
+
     }
 
     private fun setupLoginInputFiled() {
@@ -61,34 +67,34 @@ class LoginActivity : AppCompatActivity() {
         /**
          * Set email into edit text and validate email on change
          */
-        loginActivity_etEmail.apply {
-            onChange {
-                loginActivity_etlEmail.showError(
-                    isError = it.isNotEmailValid(),
-                    errorText = getString(R.string.login_email_input_error),
-                    helperText = getString(R.string.login_email_input_hint)
-                )
-                viewModel.email = it
-            }
-            setText(viewModel.email)
-        }
+//        loginActivity_etEmail.apply {
+//            onChange {
+//                loginActivity_etlEmail.setupLiveChange(
+//                    errorCondition = it.isEmailNotValid(),
+//                    errorText = getString(R.string.email_input_error),
+//                    helperText = getString(R.string.email_input_helper_text)
+//                )
+//                viewModel.email = it
+//            }
+//            setText(viewModel.email)
+//        }
 
 
         /**
          * Set password into edit text validate email on change
          */
-        loginActivity_etPassword.apply {
-            onChange {
-                loginActivity_etlPassword.showError(
-                    // Password should be greater than 5
-                    isError = (it.isNullOrEmpty() || it.length < 6),
-                    errorText = getString(R.string.login_password_input_error),
-                    helperText = getString(R.string.login_password_input_hint)
-                )
-                viewModel.password = it
-            }
-            setText(viewModel.password)
-        }
+//        loginActivity_etPassword.apply {
+//            onChange {
+//                loginActivity_etlPassword.setupLiveChange(
+//                    // Password should be greater than 5
+//                    errorCondition = (it.isNullOrEmpty() || it.length < 6),
+//                    errorText = getString(R.string.password_input_error),
+//                    helperText = getString(R.string.password_input_helper_text)
+//                )
+//                viewModel.password = it
+//            }
+//            setText(viewModel.password)
+//        }
 
     }
 
@@ -100,34 +106,34 @@ class LoginActivity : AppCompatActivity() {
         /**
          * Set password into edit text validate email on change
          */
-        loginActivity_etCreatePassword.apply {
-            onChange {
-                viewModel.createPassword = it
-                loginActivity_etlCreatePassword.showError(
-                    // Password should be greater than 5
-                    isError = (it.isNullOrEmpty() || it.length < 6),
-                    errorText = getString(R.string.login_password_input_error),
-                    helperText = getString(R.string.login_password_input_hint)
-                )
-            }
-            setText(viewModel.createPassword)
-        }
+//        loginActivity_etCreatePassword.apply {
+//            onChange {
+//                viewModel.createPassword = it
+//                loginActivity_etlCreatePassword.setupLiveChange(
+//                    // Password should be greater than 5
+//                    errorCondition = (it.isNullOrEmpty() || it.length < 6),
+//                    errorText = getString(R.string.password_input_error),
+//                    helperText = getString(R.string.password_input_helper_text)
+//                )
+//            }
+//            setText(viewModel.createPassword)
+//        }
 
         /**
          * Set password into edit text validate email on change
          */
-        loginActivity_etCreatePasswordReEnter.apply {
-            onChange {
-                viewModel.createRetypePassword = it
-                loginActivity_etlCreatePasswordReEnter.showError(
-                    // Password should be greater than 5
-                    isError = (it.isNullOrEmpty() || it.length < 6 || viewModel.createPassword != viewModel.createRetypePassword),
-                    errorText = getString(R.string.login_password_re_enter_input_error),
-                    helperText = getString(R.string.login_password_re_enter_input_hint)
-                )
-            }
-            setText(viewModel.createRetypePassword)
-        }
+//        loginActivity_etCreatePasswordReEnter.apply {
+//            onChange {
+//                viewModel.createRetypePassword = it
+//                loginActivity_etlCreatePasswordReEnter.setupLiveChange(
+//                    // Password should be greater than 5
+//                    errorCondition = (it.isNullOrEmpty() || it.length < 6 || viewModel.createPassword != viewModel.createRetypePassword),
+//                    errorText = getString(R.string.password_re_enter_input_error),
+//                    helperText = getString(R.string.password_re_enter_input_helper_text)
+//                )
+//            }
+//            setText(viewModel.createRetypePassword)
+//        }
     }
 
     private fun showCreatePasswordForm(animate: Boolean) {
