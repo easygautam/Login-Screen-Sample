@@ -46,21 +46,21 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/loginActivity_etlEmail"
-                        style="@style/LoginOutlineEditTextLayout"
+                        style="@style/LoginEditTextLayout"
                         android:hint="@string/email"
                         app:endIconMode="clear_text"
                         app:startIconDrawable="@drawable/ic_email">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/loginActivity_etEmail"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textEmailAddress" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/loginActivity_etlPassword"
-                        style="@style/LoginOutlineEditTextLayout"
+                        style="@style/LoginEditTextLayout"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:hint="@string/password"
                         app:endIconMode="password_toggle"
@@ -68,7 +68,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/loginActivity_etPassword"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textPassword" />
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -118,6 +118,7 @@
                             style="@style/LoginGmailButton" />
 
                     </LinearLayout>
+
                 </LinearLayout>
 
                 <!--Create Password-->
@@ -130,7 +131,7 @@
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/loginActivity_etlCreatePassword"
-                        style="@style/LoginOutlineEditTextLayout"
+                        style="@style/LoginEditTextLayout"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:hint="@string/password"
                         app:endIconMode="password_toggle"
@@ -139,14 +140,14 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/loginActivity_etCreatePassword"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textPassword" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/loginActivity_etlCreatePasswordReEnter"
-                        style="@style/LoginOutlineEditTextLayout"
+                        style="@style/LoginEditTextLayout"
                         android:layout_marginTop="@dimen/_8sdp"
                         android:hint="@string/create_password_re_enter_password"
                         app:endIconMode="password_toggle"
@@ -155,7 +156,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/loginActivity_etCreatePasswordReEnter"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textPassword" />
 
                     </com.google.android.material.textfield.TextInputLayout>

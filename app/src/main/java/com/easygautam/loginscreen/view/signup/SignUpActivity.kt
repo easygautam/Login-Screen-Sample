@@ -5,11 +5,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import com.easygautam.easymaterialdesign.isEmailNotValid
+import com.easygautam.easymaterialdesign.isMobileNotValid
+import com.easygautam.easymaterialdesign.isPasswordNotValid
 import com.easygautam.loginscreen.R
 import com.easygautam.loginscreen.databinding.ActivitySignUpBinding
-import com.easygautam.loginscreen.view.isEmailNotValid
-import com.easygautam.loginscreen.view.isMobileNotValid
-import com.easygautam.loginscreen.view.isPasswordNotValid
 
 class SignUpActivity : AppCompatActivity() {
 

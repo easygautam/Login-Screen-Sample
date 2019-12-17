@@ -58,7 +58,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/signUpActivity_etFirstName"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textEmailAddress"
                             android:text='@={viewModel.firstName}' />
 
@@ -77,7 +77,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/signUpActivity_etLastName"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textEmailAddress"
                             android:text="@={viewModel.lastName}" />
 
@@ -96,7 +96,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/signUpActivity_etEmail"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textEmailAddress"
                             android:text="@={viewModel.email}" />
 
@@ -115,7 +115,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/signUpActivity_etMobile"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="phone"
                             android:text="@={viewModel.mobile}" />
 
@@ -134,7 +134,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/signUpActivity_etPassword"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textPassword"
                             android:text="@={viewModel.password}" />
 
@@ -152,7 +152,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/signUpActivity_etPasswordReEnter"
-                            style="@style/LoginOutlineEditText"
+                            style="@style/LoginEditText"
                             android:inputType="textPassword"
                             android:text="@={viewModel.passwordReEnter}" />
 

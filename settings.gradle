@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':easy-material-design'
 rootProject.name='Login-Screen-Sample'
