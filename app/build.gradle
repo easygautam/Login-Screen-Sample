@@ -38,7 +38,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-//    implementation 'com.easygautam:easy-material-design:0.1.0'
+    implementation 'com.easygautam:easy-material-design:0.1.0'
 
     implementation 'me.toptas.fancyshowcase:fancyshowcaseview:1.2.1'
 
